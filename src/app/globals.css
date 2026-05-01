@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #000000;
+  --color-secondary: #4648d4;
+  --color-tertiary: #000000;
+  --color-background: #f7f9fb;
+  --color-surface: #f7f9fb;
+  --color-surface-dim: #d8dadc;
+  --color-surface-bright: #f7f9fb;
+  --color-surface-container: #eceef0;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-container-high: #e6e8ea;
+  --color-surface-container-highest: #e0e3e5;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #44474d;
+  --color-primary-container: #0d1c32;
+  --color-on-primary: #ffffff;
+  --color-secondary-container: #6063ee;
+  
+  --font-inter: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+:root {
+  --background: #f7f9fb;
+  --foreground: #191c1e;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-mono antialiased;
+  }
+}
+
+@layer utilities {
+  .bento-card {
+    @apply bg-white rounded-[32px] overflow-hidden border border-black/5 transition-all duration-500 ease-out hover:border-secondary hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/5;
+  }
+  
+  .glass-overlay {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .editorial-line {
+    @apply h-px bg-gradient-to-r from-current to-transparent opacity-20;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-[#6063ee];
+  }
+}
