@@ -3,6 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Landmark, FileText, TrendingUp, MoveRight, ShieldCheck, RefreshCw } from "lucide-react";
+import Typography from "./ui/Typography";
+
+const MotionTypography = motion.create(Typography);
 
 const CapabilitiesMatrix = () => {
   return (
@@ -18,12 +21,18 @@ const CapabilitiesMatrix = () => {
           className="md:col-span-4 bg-primary-container text-white rounded-[32px] p-10 flex flex-col justify-between min-h-[600px] border border-white/5"
         >
           <div>
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-secondary mb-16 font-mono">Performance Metrics</h3>
+            <Typography as="h3" intent="label" color="secondary" className="mb-16">
+              Performance Metrics
+            </Typography>
             <div className="space-y-16">
               <div className="pb-6">
                 <div className="flex items-end justify-between mb-4">
-                  <span className="text-[10px] uppercase tracking-widest text-white/50 font-mono">Success Rate</span>
-                  <span className="text-6xl font-black text-secondary font-inter">98%</span>
+                  <Typography as="span" intent="label" color="white" className="opacity-50">
+                    Success Rate
+                  </Typography>
+                  <Typography as="span" intent="h1" color="secondary" className="text-6xl">
+                    98%
+                  </Typography>
                 </div>
                 <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
                   <motion.div 
@@ -37,16 +46,22 @@ const CapabilitiesMatrix = () => {
               </div>
               <div className="pb-6">
                 <div className="flex items-end justify-between mb-4">
-                  <span className="text-[10px] uppercase tracking-widest text-white/50 font-mono">Partners</span>
-                  <span className="text-6xl font-black font-inter">500+</span>
+                  <Typography as="span" intent="label" color="white" className="opacity-50">
+                    Partners
+                  </Typography>
+                  <Typography as="span" intent="h1" color="white" className="text-6xl">
+                    500+
+                  </Typography>
                 </div>
                 <div className="h-1 w-full bg-white/5 rounded-full"></div>
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-3 text-[10px] opacity-40 font-bold uppercase tracking-widest pt-8 border-t border-white/10 font-mono">
-            <RefreshCw className="w-3 h-3" />
-            <span>DATA UPDATED: Q4 2024</span>
+          <div className="flex items-center gap-3 pt-8 border-t border-white/10 opacity-40">
+            <RefreshCw className="w-3 h-3 text-white" />
+            <Typography as="span" intent="label" color="white">
+              DATA UPDATED: Q4 2024
+            </Typography>
           </div>
         </motion.div>
 
@@ -67,14 +82,18 @@ const CapabilitiesMatrix = () => {
                 <div className="w-12 h-12 bg-secondary/5 rounded-2xl flex items-center justify-center text-secondary mb-10 border border-secondary/10">
                   <Landmark className="w-6 h-6" />
                 </div>
-                <h3 className="font-black text-2xl mb-4 tracking-tighter uppercase font-inter">Placement</h3>
+                <Typography as="h3" intent="h2" className="mb-4">
+                  Placement
+                </Typography>
                 <div className="editorial-line text-on-surface mb-6"></div>
-                <p className="text-on-surface-variant text-sm leading-relaxed font-mono">
+                <Typography as="p" intent="body" color="muted">
                   Expert institutional matching based on advanced academic telemetry and profile optimization.
-                </p>
+                </Typography>
               </div>
               <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
-                <span className="text-[10px] font-black text-secondary tracking-widest font-mono">ACTIVE PROTOCOL</span>
+                <Typography as="span" intent="label" color="secondary">
+                  ACTIVE PROTOCOL
+                </Typography>
                 <MoveRight className="w-5 h-5 opacity-40 hover:opacity-100 transition-opacity cursor-pointer" />
               </div>
             </motion.div>
@@ -91,14 +110,18 @@ const CapabilitiesMatrix = () => {
                 <div className="w-12 h-12 bg-primary/5 rounded-2xl flex items-center justify-center text-primary mb-10 border border-primary/10">
                   <FileText className="w-6 h-6" />
                 </div>
-                <h3 className="font-black text-2xl mb-4 tracking-tighter uppercase font-inter">Visa Ops</h3>
+                <Typography as="h3" intent="h2" className="mb-4">
+                  Visa Ops
+                </Typography>
                 <div className="editorial-line text-primary mb-6"></div>
-                <p className="text-on-surface-variant text-sm leading-relaxed font-mono">
+                <Typography as="p" intent="body" color="muted">
                   End-to-end regulatory compliance and documentation engineering for global mobility.
-                </p>
+                </Typography>
               </div>
               <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
-                <span className="text-[10px] font-black text-primary tracking-widest font-mono">SECURE PROCESS</span>
+                <Typography as="span" intent="label">
+                  SECURE PROCESS
+                </Typography>
                 <ShieldCheck className="w-5 h-5 opacity-40" />
               </div>
             </motion.div>
@@ -116,12 +139,14 @@ const CapabilitiesMatrix = () => {
               <div className="w-16 h-16 bg-secondary/5 rounded-2xl flex items-center justify-center text-secondary border border-secondary/10 shrink-0">
                 <TrendingUp className="w-8 h-8" />
               </div>
-              <h3 className="font-black text-3xl tracking-tighter uppercase font-inter">Careers</h3>
+              <Typography as="h3" intent="h2">
+                Careers
+              </Typography>
             </div>
             <div className="w-full md:w-1/2">
-              <p className="text-on-surface-variant text-base leading-relaxed font-mono">
+              <Typography as="p" intent="body" color="muted" className="text-base">
                 Strategic alignment with high-growth global job markets and industry verticals through direct corporate network integration.
-              </p>
+              </Typography>
             </div>
             <div className="w-full md:w-auto flex flex-col items-end gap-6">
               <div className="flex gap-2">
@@ -129,7 +154,9 @@ const CapabilitiesMatrix = () => {
                 <div className="w-2 h-2 bg-secondary rounded-full opacity-40"></div>
                 <div className="w-2 h-2 bg-secondary rounded-full opacity-10"></div>
               </div>
-              <span className="text-[10px] font-black text-secondary tracking-widest font-mono">MARKET SYNC</span>
+              <Typography as="span" intent="label" color="secondary">
+                MARKET SYNC
+              </Typography>
             </div>
           </motion.div>
         </div>

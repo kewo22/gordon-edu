@@ -21,6 +21,14 @@
   
   --font-inter: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+
+  /* Fluid Font Sizes */
+  --font-size-display: clamp(2.5rem, 8vw + 1rem, 8rem);
+  --font-size-h1: clamp(2.25rem, 5vw + 1rem, 5rem);
+  --font-size-h2: clamp(1.75rem, 3vw + 1rem, 3.5rem);
+  --font-size-h3: clamp(1.25rem, 2vw + 1rem, 2.25rem);
+  --font-size-body: clamp(0.875rem, 0.5vw + 0.75rem, 1.125rem);
+  --font-size-label: clamp(0.7rem, 0.2vw + 0.6rem, 0.875rem);
 }
 
 :root {

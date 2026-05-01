@@ -3,6 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
+import Typography from "./ui/Typography";
+
+const MotionTypography = motion.create(Typography);
 
 const Hero = () => {
   return (
@@ -22,34 +25,43 @@ const Hero = () => {
 
         {/* Hero Content */}
         <div className="max-w-[1400px] mx-auto w-full mb-12">
-          <motion.span 
+          <MotionTypography 
+            as="span"
+            intent="label"
+            color="secondary"
+            className="mb-4 block tracking-[0.4em]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-secondary font-bold text-xs uppercase tracking-[0.4em] mb-4 block"
           >
             // GLOBAL EDUCATION PLATFORM
-          </motion.span>
+          </MotionTypography>
           
-          <motion.h1 
+          <MotionTypography
+            as="h1"
+            intent="display"
+            color="white"
+            className="max-w-4xl mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tighter max-w-4xl mb-8 font-inter"
           >
             SHAPE<br />YOUR FUTURE.
-          </motion.h1>
+          </MotionTypography>
           
           <div className="editorial-line text-white mb-8 max-w-md"></div>
           
-          <motion.p 
+          <MotionTypography
+            as="p"
+            intent="body"
+            color="white"
+            className="max-w-xl mb-10 opacity-80"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 1 }}
-            className="text-white/80 text-base md:text-lg max-w-xl leading-relaxed mb-10 font-light font-mono"
           >
             Strategic, precision-engineered guidance for international admissions and global university placement.
-          </motion.p>
+          </MotionTypography>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

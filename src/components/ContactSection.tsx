@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Send, Share2, Globe } from "lucide-react";
+import Typography from "./ui/Typography";
 
 const ContactSection = () => {
   return (
@@ -13,15 +14,23 @@ const ContactSection = () => {
         <div className="flex-1 p-10 lg:p-12 lg:col-span-8">
           <div className="flex justify-between items-start mb-10">
             <div>
-              <span className="text-secondary font-bold text-[10px] uppercase tracking-[0.3em] mb-2 block">Transmission</span>
-              <h2 className="text-3xl font-black uppercase tracking-tighter font-inter">Initialize Inquiry.</h2>
+              <Typography as="span" intent="label" color="secondary" className="mb-2 block">
+                Transmission
+              </Typography>
+              <Typography as="h2" intent="h2" className="font-inter">
+                Initialize Inquiry.
+              </Typography>
             </div>
-            <span className="text-[10px] font-bold opacity-30 uppercase tracking-[0.4em] pt-2 font-mono text-primary">SECURE_LINK</span>
+            <Typography as="span" intent="label" className="opacity-30 pt-2">
+              SECURE_LINK
+            </Typography>
           </div>
           
           <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
             <div className="col-span-2 md:col-span-1 space-y-2">
-              <label className="text-[10px] font-bold uppercase tracking-widest opacity-40 font-mono">Full Identity Name</label>
+              <Typography as="label" intent="label" className="opacity-40">
+                Full Identity Name
+              </Typography>
               <input 
                 className="w-full bg-surface-container/50 border border-outline-variant/10 rounded-xl px-5 py-3.5 text-xs focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all font-mono" 
                 type="text" 
@@ -29,7 +38,9 @@ const ContactSection = () => {
               />
             </div>
             <div className="col-span-2 md:col-span-1 space-y-2">
-              <label className="text-[10px] font-bold uppercase tracking-widest opacity-40 font-mono">Email Node Address</label>
+              <Typography as="label" intent="label" className="opacity-40">
+                Email Node Address
+              </Typography>
               <input 
                 className="w-full bg-surface-container/50 border border-outline-variant/10 rounded-xl px-5 py-3.5 text-xs focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all font-mono" 
                 type="email" 
@@ -37,7 +48,9 @@ const ContactSection = () => {
               />
             </div>
             <div className="col-span-2 space-y-2">
-              <label className="text-[10px] font-bold uppercase tracking-widest opacity-40 font-mono">Message Body / Payload</label>
+              <Typography as="label" intent="label" className="opacity-40">
+                Message Body / Payload
+              </Typography>
               <textarea 
                 className="w-full bg-surface-container/50 border border-outline-variant/10 rounded-xl px-5 py-3.5 text-xs focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all min-h-[100px] font-mono" 
                 rows={3}
@@ -54,15 +67,21 @@ const ContactSection = () => {
         {/* Access Points Column */}
         <div className="w-full bg-primary-container text-white p-10 lg:p-12 flex flex-col justify-between lg:col-span-4 h-full">
           <div>
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.4em] text-secondary mb-10 font-mono">Access Points</h3>
+            <Typography as="h3" intent="label" color="secondary" className="mb-10">
+              Access Points
+            </Typography>
             <div className="space-y-10">
               <div className="flex items-start gap-5">
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
                   <MapPin className="text-secondary w-4 h-4" />
                 </div>
                 <div className="space-y-1">
-                  <span className="block text-[10px] font-bold opacity-40 uppercase tracking-widest font-mono">HQ Address</span>
-                  <p className="text-sm font-light leading-relaxed font-mono">123 Academic Way,<br />Global City, GC 45678</p>
+                  <Typography as="span" intent="label" className="block opacity-40">
+                    HQ Address
+                  </Typography>
+                  <Typography as="p" intent="body" className="font-light leading-relaxed">
+                    123 Academic Way,<br />Global City, GC 45678
+                  </Typography>
                 </div>
               </div>
               <div className="flex items-start gap-5">
@@ -70,8 +89,12 @@ const ContactSection = () => {
                   <Phone className="text-secondary w-4 h-4" />
                 </div>
                 <div className="space-y-1">
-                  <span className="block text-[10px] font-bold opacity-40 uppercase tracking-widest font-mono">Voice Comms</span>
-                  <p className="text-sm font-light font-mono">+1 (555) 012-3456</p>
+                  <Typography as="span" intent="label" className="block opacity-40">
+                    Voice Comms
+                  </Typography>
+                  <Typography as="p" intent="body" className="font-light">
+                    +1 (555) 012-3456
+                  </Typography>
                 </div>
               </div>
             </div>

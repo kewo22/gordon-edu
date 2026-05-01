@@ -3,19 +3,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import Typography from "./ui/Typography";
 
 const TacticalBriefings = () => {
   return (
     <section className="mb-24 px-6 md:px-8">
       <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-8">
         <div className="max-w-2xl">
-          <span className="text-secondary font-bold text-[10px] uppercase tracking-[0.3em] mb-3 block">Perspective</span>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase mb-6 font-inter">Visual Intelligence.</h2>
-          <p className="text-on-surface-variant text-sm leading-relaxed max-w-md font-mono">
+          <Typography as="span" intent="label" color="secondary" className="mb-3 block">
+            Perspective
+          </Typography>
+          <Typography as="h2" intent="h1" className="mb-6">
+            Visual Intelligence.
+          </Typography>
+          <Typography as="p" intent="body" color="muted" className="max-w-md">
             Access our tactical briefings on global market trends and institutional requirements.
-          </p>
+          </Typography>
         </div>
-        <div className="text-[10px] font-bold opacity-30 uppercase tracking-widest pb-2 font-mono">REF: SYSTEM_LOG_V2.4</div>
+        <Typography as="div" intent="label" className="opacity-30 pb-2">
+          REF: SYSTEM_LOG_V2.4
+        </Typography>
       </div>
 
       <motion.div 
@@ -35,9 +42,9 @@ const TacticalBriefings = () => {
             <Play className="text-secondary w-12 h-12 fill-secondary" />
           </div>
         </div>
-        <div className="absolute bottom-8 left-8 bg-white px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] shadow-lg text-primary font-mono">
+        <Typography as="div" intent="label" color="primary" className="absolute bottom-8 left-8 bg-white px-4 py-2 rounded-full shadow-lg">
           System Brief: 04:12 // PLAY NOW
-        </div>
+        </Typography>
       </motion.div>
     </section>
   );
