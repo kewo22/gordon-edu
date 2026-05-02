@@ -13,13 +13,20 @@ const typography = tv({
   base: "tracking-tight antialiased",
   variants: {
     intent: {
-      display: "font-inter font-black leading-[0.95] text-size-display uppercase",
-      h1: "font-inter font-black leading-[1.1] text-size-h1 uppercase",
-      h2: "font-inter font-black leading-[1.2] text-size-h2 uppercase",
-      h3: "font-inter font-bold leading-[1.3] text-size-h3 uppercase",
-      body: "font-mono font-medium leading-relaxed text-size-body",
-      label: "font-mono font-bold uppercase tracking-[0.3em] text-size-label",
-      code: "font-mono font-medium bg-surface-container px-1.5 py-0.5 rounded text-size-label",
+      /* Hero headline — max impact, ultra-tight optical leading */
+      display: "font-inter font-black leading-[0.9] tracking-tighter fs-display uppercase",
+      /* Section headings — e.g. "Visual Intelligence.", "Initialize Inquiry." */
+      h1: "font-inter font-black leading-[1.0] tracking-tighter fs-h1 uppercase",
+      /* Card headings — e.g. "Placement", "Visa Ops", "Careers" */
+      h2: "font-inter font-black leading-[1.1] tracking-tight fs-h2 uppercase",
+      /* Sub-headings — e.g. "GFEC_CONSOLE", contact sub-labels */
+      h3: "font-inter font-bold leading-[1.2] tracking-tight fs-h3 uppercase",
+      /* Body copy — paragraph descriptions */
+      body: "font-mono font-normal leading-relaxed fs-body",
+      /* Labels, tags, metadata — e.g. "ACTIVE PROTOCOL", "Q4 2024" */
+      label: "font-mono font-bold uppercase tracking-[0.4em] fs-label",
+      /* Inline code snippets */
+      code: "font-mono font-medium bg-surface-container px-1.5 py-0.5 rounded fs-label",
     },
     color: {
       primary: "text-primary",

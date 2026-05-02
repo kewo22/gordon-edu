@@ -30,7 +30,7 @@ const CapabilitiesMatrix = () => {
                   <Typography as="span" intent="label" color="white" className="opacity-50">
                     Success Rate
                   </Typography>
-                  <Typography as="span" intent="h1" color="secondary" className="text-6xl">
+                  <Typography as="span" intent="display" color="secondary">
                     98%
                   </Typography>
                 </div>
@@ -49,7 +49,7 @@ const CapabilitiesMatrix = () => {
                   <Typography as="span" intent="label" color="white" className="opacity-50">
                     Partners
                   </Typography>
-                  <Typography as="span" intent="h1" color="white" className="text-6xl">
+                  <Typography as="span" intent="display" color="white">
                     500+
                   </Typography>
                 </div>

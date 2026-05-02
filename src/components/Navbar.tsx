@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import Typography from "./ui/Typography";
 
@@ -24,7 +23,7 @@ const Navbar = () => {
           >
             <Typography
               as="span"
-              intent="label"
+              intent="body"
               color="white"
               className={idx === 0 ? "border-b border-white" : "opacity-70 hover:opacity-100 transition-opacity"}
             >
@@ -34,9 +33,9 @@ const Navbar = () => {
         ))}
       </div>
 
-      <Typography as="button" intent="label" color="primary" className="bg-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-all hover:scale-105 active:scale-95">
+      {/* <Typography as="button" intent="label" color="primary" className="bg-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-all hover:scale-105 active:scale-95">
         Execute Application
-      </Typography>
+      </Typography> */}
     </nav>
   );
 };
