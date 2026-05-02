@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Landmark, FileText, TrendingUp, MoveRight, ShieldCheck, RefreshCw } from "lucide-react";
 import Typography from "./ui/Typography";
+import AnimatedCounter from "./ui/AnimatedCounter";
 
 const MotionTypography = motion.create(Typography);
 
@@ -11,9 +12,9 @@ const CapabilitiesMatrix = () => {
   return (
     <section className="mb-24 px-6 md:px-8">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-        
+
         {/* Metrics Card (Left Column) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -21,7 +22,7 @@ const CapabilitiesMatrix = () => {
           className="md:col-span-4 bg-primary-container text-white rounded-[32px] p-10 flex flex-col justify-between min-h-[600px] border border-white/5"
         >
           <div>
-            <Typography as="h3" intent="label" color="secondary" className="mb-16">
+            <Typography as="h3" intent="body" color="secondary" className="mb-16">
               Performance Metrics
             </Typography>
             <div className="space-y-16">
@@ -30,17 +31,17 @@ const CapabilitiesMatrix = () => {
                   <Typography as="span" intent="label" color="white" className="opacity-50">
                     Success Rate
                   </Typography>
-                  <Typography as="span" intent="display" color="secondary">
-                    98%
+                  <Typography as="span" intent="h1" color="secondary">
+                    <AnimatedCounter value={98} suffix="%" duration={2} />
                   </Typography>
                 </div>
                 <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                  <motion.div 
+                  <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "98%" }}
                     viewport={{ once: true }}
                     transition={{ duration: 1.5, ease: "circOut" }}
-                    className="h-full bg-secondary" 
+                    className="h-full bg-secondary"
                   />
                 </div>
               </div>
@@ -49,8 +50,8 @@ const CapabilitiesMatrix = () => {
                   <Typography as="span" intent="label" color="white" className="opacity-50">
                     Partners
                   </Typography>
-                  <Typography as="span" intent="display" color="white">
-                    500+
+                  <Typography as="span" intent="h1" color="white">
+                    <AnimatedCounter value={500} suffix="+" duration={2} delay={0.2} />
                   </Typography>
                 </div>
                 <div className="h-1 w-full bg-white/5 rounded-full"></div>
@@ -67,12 +68,12 @@ const CapabilitiesMatrix = () => {
 
         {/* Services Right Column */}
         <div className="md:col-span-8 flex flex-col gap-8">
-          
+
           {/* Top Row: Placement & Visa Ops */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+
             {/* Placement */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -99,7 +100,7 @@ const CapabilitiesMatrix = () => {
             </motion.div>
 
             {/* Visa Ops */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -107,7 +108,7 @@ const CapabilitiesMatrix = () => {
               className="bento-card p-10 flex flex-col justify-between min-h-[300px] bg-surface-container-low"
             >
               <div>
-                <div className="w-12 h-12 bg-primary/5 rounded-2xl flex items-center justify-center text-primary mb-10 border border-primary/10">
+                <div className="w-12 h-12 bg-secondary/5 rounded-2xl flex items-center justify-center text-secondary mb-10 border border-secondary/10">
                   <FileText className="w-6 h-6" />
                 </div>
                 <Typography as="h3" intent="h2" className="mb-4">
@@ -128,14 +129,14 @@ const CapabilitiesMatrix = () => {
           </div>
 
           {/* Bottom Row: Careers (Prominent Card) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
             className="bento-card p-10 lg:p-12 flex flex-col md:flex-row items-center justify-between gap-10 bg-white grow"
           >
-            <div className="flex items-center gap-8 w-full md:w-1/3">
+            <div className="flex flex-col items-start gap-8 w-full md:w-1/3">
               <div className="w-16 h-16 bg-secondary/5 rounded-2xl flex items-center justify-center text-secondary border border-secondary/10 shrink-0">
                 <TrendingUp className="w-8 h-8" />
               </div>

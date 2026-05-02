@@ -10,21 +10,21 @@ const TacticalBriefings = () => {
       <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-8">
         <div className="max-w-2xl">
           <Typography as="span" intent="label" color="secondary" className="mb-3 block">
-            Perspective
+            Some text
           </Typography>
           <Typography as="h2" intent="h1" className="mb-6">
-            Visual Intelligence.
+            Header Text
           </Typography>
           <Typography as="p" intent="body" color="muted" className="max-w-md">
-            Access our tactical briefings on global market trends and institutional requirements.
+            Some long description.
           </Typography>
         </div>
-        <Typography as="div" intent="label" className="opacity-30 pb-2">
+        {/* <Typography as="div" intent="label" className="opacity-30 pb-2">
           REF: SYSTEM_LOG_V2.4
-        </Typography>
+        </Typography> */}
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
