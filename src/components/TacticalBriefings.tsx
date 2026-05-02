@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
 import Typography from "./ui/Typography";
 
 const TacticalBriefings = () => {
@@ -30,21 +29,13 @@ const TacticalBriefings = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="bento-card group relative cursor-pointer aspect-video w-full"
+        className="bento-card group relative aspect-video w-full overflow-hidden"
       >
-        <img
-          alt="Consultants"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEDaWFVQ9WEL-f_MFRdzi-JyTecgWH4yWmu9aPcehPiEKh-qZH9E0-hrPSD_fdcQEjpdhFl94qAsbKQ8GrlGjGXV1G2cnutKsDTzL520jdvBLNDE3pnq0cgpIcX2gA7K9P4KLxBhUlq27Xh6CJsJZYJ5yrSKZt3T5AP6pLKpGIf7bQgPdvLIsPdzWBiZAsWKbi0Sa8nLhHiPgpo5YIyKhyoebr1yE_WqjhojvUi0UOrZqOCLUDfqu-X21ig7bEWx7yBgCol0VWOMwI"
+        <video
+          src="/about-video.mp4"
+          controls
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all flex items-center justify-center">
-          <div className="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
-            <Play className="text-secondary w-12 h-12 fill-secondary" />
-          </div>
-        </div>
-        <Typography as="div" intent="label" color="primary" className="absolute bottom-8 left-8 bg-white px-4 py-2 rounded-full shadow-lg">
-          System Brief: 04:12 // PLAY NOW
-        </Typography>
       </motion.div>
     </section>
   );
