@@ -130,6 +130,7 @@ const CapabilitiesMatrix = () => {
 
           {/* Bottom Row: Careers (Prominent Card) */}
           <motion.div
+            id="capabilities-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -150,14 +151,15 @@ const CapabilitiesMatrix = () => {
               </Typography>
             </div>
             <div className="w-full md:w-auto flex flex-col items-end gap-6">
-              <div className="flex gap-2">
+              {/* 3 dots */}
+              <div id="3-dots" className="flex gap-2">
                 <div className="w-2 h-2 bg-secondary rounded-full"></div>
                 <div className="w-2 h-2 bg-secondary rounded-full opacity-40"></div>
-                <div className="w-2 h-2 bg-secondary rounded-full opacity-10"></div>
+                <div className="w-2 h-2 bg-secondary rounded-full opacity-40"></div>
               </div>
-              <Typography as="span" intent="label" color="secondary">
+              {/* <Typography as="span" intent="label" color="secondary">
                 MARKET SYNC
-              </Typography>
+              </Typography> */}
             </div>
           </motion.div>
         </div>
